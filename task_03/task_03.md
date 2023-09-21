@@ -28,9 +28,9 @@ OrderDetails.ProductID = Products.ProductID
 
 ### Вывести ко-во стран, которые поставляют напитки ///12
 
-SELECT distinct
+SELECT
 Country,
-COUNT(*) AS country_drinks
+COUNT(distinct Country) AS country_drinks
 FROM [Products]
 join Suppliers on
 Products.SupplierID = Suppliers.SupplierID
